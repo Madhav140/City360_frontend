@@ -1,0 +1,35 @@
+.referal{
+    position: relative;
+    width: 800px;
+    height: 160px;
+}
+
+.referal:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 800px solid #031f50; 
+    border-bottom: 160px solid transparent ;
+    border-radius: 20px;
+}
+
+
+
+.referal:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-right: 800px solid #02399a; 
+    border-top: 160px solid transparent;
+    border-radius: 20px;
+    color: #eceeee;
+
+}
+
+
