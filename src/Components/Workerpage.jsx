@@ -10,7 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { BASE_URL } from '../Services/baseUrl';
-import { UpdateworkerApi, allworkerbookedAPI, workerapprovalAPI } from '../Services/allApi';
+import { UpdateworkerApi, allworkerbookedAPI, workerapprovalFalseAPI, workerapprovalTrueAPI } from '../Services/allApi';
 import Swal from 'sweetalert2'
 import Card from 'react-bootstrap/Card';
 import { Link, useNavigate } from 'react-router-dom';
@@ -26,12 +26,6 @@ function Workerpage() {
     event.preventDefault();
   };
   const [preview, setpreview] = useState("")
-  const [truestatus,settruestatus] = useState({
-    tstatus:"true"
-  })
-  const [falsestatus,setfalsestatus] = useState({
-    fstatus:"false"
-  })
   const worker = JSON.parse(sessionStorage?.getItem("existingworker"))
 
    const navigate = useNavigate()
@@ -157,13 +151,14 @@ function Workerpage() {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${token}`
         }
-        const result = await workerapprovalAPI(id,truestatus,reqheader)
+        const result = await workerapprovalTrueAPI(id,reqheader)
         if (result.status === 200) {
           Swal.fire({
             title: 'Approved',
             text: `Your scheduled date is ${date}`,
             icon: 'success'   
-          })  
+          }) 
+          userbookedworkers() 
         }
         else {
           Swal.fire({
@@ -181,14 +176,14 @@ function Workerpage() {
       "Content-Type": "application/json",
       "Authorization": `Bearer ${token}`
     }
-    const result = await workerapprovalAPI(id,falsestatus,reqheader)
+    const result = await workerapprovalFalseAPI(id,reqheader)
     if (result.status === 200) {
       Swal.fire({
         title: 'Declined',
         text: `Request is declined`,
         icon: 'info'   
       })  
-     
+     userbookedworkers()
     }
     else {
       Swal.fire({
@@ -245,12 +240,12 @@ const handlelogout = ()=>{
 
 
 
-        <div className='w-25 bg-light d-flex flex-column justify-content-center align-items-center' style={{ height: '87vh', borderRadius: '50px' }}>
-          <h2 className='text-center text-dark mt-3'>Worker Profile</h2>
+        <div className='bg-light d-flex flex-column justify-content-center align-items-center mt-5' style={{ height: '100vh',width:'450px', borderRadius: '50px' }}>
+          <h2 className='text-center text-dark'>Worker Profile</h2>
           <div className='d-flex justify-content-center mt-3'>
             <label htmlFor="profile" className='text-center'>
               <input id='profile' type="file" style={{ display: 'none' }} onChange={(e) => { seteditWorker({ ...editWorker, photo: e.target.files[0] }) }} />
-              <img width={'150px'} height={'200px'} style={{ borderRadius: '50px' }} src={preview ? preview : `${BASE_URL}/uploads/${worker.photo}`} alt="no image" />
+              <img width={'150px'} height={'150px'} style={{ borderRadius: '50px' }} src={preview ? preview : `${BASE_URL}/uploads/${worker.photo}`} alt="no image" />
             </label>
           </div>
 
@@ -317,8 +312,8 @@ const handlelogout = ()=>{
           </div>
 
           <Stack className='mt-3 mb-2 d-flex  justify-content-center' direction="row" spacing={2}>
-            <Button onClick={handleUpdate} type='submit' className='bg-outline-warning' style={{ width: '200px', height: '50px' }} variant="contained">Update</Button>
-            <Button onClick={reset} style={{ width: '200px', height: '50px' }} variant="outlined">Reset</Button>
+            <Button onClick={handleUpdate} type='submit' className='bg-outline-warning' style={{ width: '150px', height: '40px' }} variant="contained">Update</Button>
+            <Button onClick={reset} style={{ width: '150px', height: '40px' }} variant="outlined">Reset</Button>
           </Stack>
         </div>
 
@@ -328,13 +323,13 @@ const handlelogout = ()=>{
         <div className='mt-3 w-50 mb-3 ms-5' style={{height:'40vh',backgroundColor:'beige',borderRadius:'50px'}}>
            <h2 className='text-center mt-2'>Reviews</h2>
          
-           <div className='d-flex mt-4' style={{overflowY:'auto'}}>
+           <div className='d-flex mt-4 flex-column' style={{overflowY:'auto'}}>
 
            { userreviews?.length>0?
            userreviews?.map(item=>
           <div className='d-flex'><h3 className='ms-5'>{item.username} :</h3> <h4 className='mt-1 ms-2'>{item.bookedusers.find(item=>item.workerid==worker._id).review}</h4></div>
           ):
-        <h3>No reviews</h3>
+        <h3 className='text-center text-danger fs-2 ms-5'>No reviews</h3>
         }
 
            </div>

@@ -224,7 +224,7 @@ function Userpage() {
         </Modal.Header>
         <Modal.Body className='d-flex flex-column justify-content-center align-items-center' >
        <div className='d-flex'>
-           <img height={'300px'} width={'250px'} src={`${BASE_URL}/uploads/${modalitem.photo}`} alt="" />
+           <img height={'260px'} width={'250px'} src={`${BASE_URL}/uploads/${modalitem.photo}`} alt="" />
           <div className='mt-2 p-3'>
           <h6><span className='text-danger'>Worktype</span> : {modalitem.worktype}</h6>
           <h6><span className='text-danger'>Description</span> : {modalitem.description}</h6>
@@ -242,13 +242,13 @@ function Userpage() {
          <input style={{width:'350px'}}  onChange={(e)=>{setbooking({...booking,date:e.target.value})}} type="date" id='date' className='form-control' />
         </div>
         <div className='mb-2'>
-          <TextField style={{width:'350px'}} onChange={(e)=>{setbooking({...booking,service:e.target.value})}}  label="Your service description" variant="outlined" />
+          <TextField size='small' style={{width:'350px'}} onChange={(e)=>{setbooking({...booking,service:e.target.value})}}  label="Your service description" variant="outlined" />
         </div>
         <div className='mb-2'>
-          <TextField style={{width:'350px'}}  onChange={(e)=>{setbooking({...booking,location:e.target.value})}}   label="Your Place" variant="outlined" />
+          <TextField size='small'  style={{width:'350px'}}  onChange={(e)=>{setbooking({...booking,location:e.target.value})}}   label="Your Place" variant="outlined" />
         </div>
         <div className='mb-2'>
-          <TextField style={{width:'350px'}}  onChange={(e)=>{setbooking({...booking,locationURL:e.target.value})}}  label="Location URL" variant="outlined" />
+          <TextField size='small'  style={{width:'350px'}}  onChange={(e)=>{setbooking({...booking,locationURL:e.target.value})}}  label="Location URL" variant="outlined" />
         </div>
 
         </div>

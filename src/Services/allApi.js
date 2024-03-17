@@ -106,9 +106,14 @@ export const allworkerbookedAPI = async(reqheader)=>{
  }
 
 
-  //worker aproval api
-export const workerapprovalAPI = async(id,body,reqheader)=>{
-   return await commonApi('PUT',`${BASE_URL}/worker/approve/${id}`,body,reqheader)
+  //worker aproval true api
+export const workerapprovalTrueAPI = async(id,reqheader)=>{
+   return await commonApi('PUT',`${BASE_URL}/worker/approvetrue/${id}`,{},reqheader)
+}
+
+  //worker aproval false api
+  export const workerapprovalFalseAPI = async(id,reqheader)=>{
+   return await commonApi('PUT',`${BASE_URL}/worker/approvefalse/${id}`,{},reqheader)
 }
 
 

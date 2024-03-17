@@ -161,27 +161,28 @@ function WorkRegister({ workerLogin }) {
       <div className='container-fluid p-5 d-flex flex-column justify-content-center align-items-center w-100' style={{ backgroundImage: `url(${bg})`, height: '100vh' }}>
 
         {!loginform ?
-          <div className='w-50 bg-light' style={{ height: '75vh', borderRadius: '50px' }}>
+          <div className='w-50 bg-light' style={{ height: '82vh', borderRadius: '50px' }}>
             <h2 className='text-center text-dark mt-3'>Worker Profile Registration</h2>
             <div className='d-flex justify-content-center mt-3'>
               <label htmlFor="profile" className='text-center'>
                 <input id='profile' type="file" style={{ display: 'none' }} onChange={(e)=>{setworker({...worker,photo:e.target.files[0]})}} />
-                <img width={'180px'} height={'180px'} style={{borderRadius:'50px'}} src={preview?preview:icon} alt="no image" />
+                <img width={'130px'} height={'130px'} style={{borderRadius:'50px'}} src={preview?preview:icon} alt="no image" />
               </label>
             </div>
 
             <div className='row mt-1'>
 
-              <div className="col-6 d-flex flex-column justify-content-center align-items-center mt-5">
+              <div className="col-6 d-flex flex-column justify-content-center align-items-center mt-2">
                 <div className='mb-3'>
-                  <TextField value={worker.name} style={{ width: '300px' }} label="Name" variant="filled" onChange={(e)=>{setworker({...worker,name:e.target.value})}} />
+                  <TextField size='small' value={worker.name} style={{ width: '300px' }} label="Name" variant="filled" onChange={(e)=>{setworker({...worker,name:e.target.value})}} />
                 </div>
                 <div className='mb-3'>
-                  <TextField value={worker.email} style={{ width: '300px' }} label="Email" variant="filled" onChange={(e)=>{setworker({...worker,email:e.target.value})}}/>
+                  <TextField size='small' value={worker.email} style={{ width: '300px' }} label="Email" variant="filled" onChange={(e)=>{setworker({...worker,email:e.target.value})}}/>
                 </div>
 
                 <div className='mb-3'>
                   <TextField
+                  size='small'
                     style={{ width: '300px' }}
                     select
                     label="Select your work"
@@ -197,16 +198,17 @@ function WorkRegister({ workerLogin }) {
                   </TextField>
                 </div>
                 <div className='mb-3'>
-                  <TextField value={worker.desc} style={{ width: '300px' }} label="Job Description" variant="filled" onChange={(e)=>{setworker({...worker,desc:e.target.value})}}/>
+                  <TextField size='small' value={worker.desc} style={{ width: '300px' }} label="Job Description" variant="filled" onChange={(e)=>{setworker({...worker,desc:e.target.value})}}/>
                 </div>
               </div>
 
-              <div className="col-6 d-flex flex-column justify-content-center align-items-center mt-5">
+              <div className="col-6 d-flex flex-column justify-content-center align-items-center mt-2">
                 <div className='mb-3'>
-                  <TextField value={worker.mobile} style={{ width: '300px' }} label="Mobile No." type='number' variant="filled" onChange={(e)=>{setworker({...worker,mobile:e.target.value})}}/>
+                  <TextField size='small' value={worker.mobile} style={{ width: '300px' }} label="Mobile No." type='number' variant="filled" onChange={(e)=>{setworker({...worker,mobile:e.target.value})}}/>
                 </div>
                 <div className='mb-3'>
                   <TextField
+                  size='small'
                     style={{ width: '300px' }}
                     select
                     label="Select your District"
@@ -223,7 +225,7 @@ function WorkRegister({ workerLogin }) {
                 </div>
 
                 <div className='mb-3'>
-                  <FormControl  style={{ width: '300px' }} variant="filled" onChange={(e)=>{setworker({...worker,pswd:e.target.value})}}>
+                  <FormControl size='small' style={{ width: '300px' }} variant="filled" onChange={(e)=>{setworker({...worker,pswd:e.target.value})}}>
                     <InputLabel htmlFor="filled-adornment-password">Password</InputLabel>
                     <FilledInput
                     value={worker.pswd}

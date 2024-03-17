@@ -155,6 +155,8 @@ function Adminpage({ adminLogin }) {
       icon: 'success'   
     })
     setapprove(true)
+    handleClose()
+    getworkers()
    }
    else{
     Swal.fire({
@@ -327,10 +329,10 @@ const size = {
           </div>
           <h6 className='text-light mt-4'>Back to <Link onClick={home} className='text-light' style={{ textDecoration: 'none', textDecorationLine: 'underline' }}>Home</Link></h6>
         </div> :
-        <div style={{ height: '150vh' }} className='d-flex flex-column justify-content-center align-items-center'>
-          <button style={{marginLeft:'150vh'}} onClick={handleLogout} className='btn btn-outline-danger'>Logout</button>
+        <div style={{ height: '100%' }} className='d-flex flex-column justify-content-center align-items-center'>
+          <button style={{marginLeft:'150vh'}} onClick={handleLogout} className='btn btn-outline-danger mt-2'>Logout</button>
           <h1 className='mb-5'>Welcome {user.Adminname}</h1>
-          <div className='d-flex justify-content-between w-50'>
+          <div className='d-flex justify-content-between w-75'>
           <div>
             <h2 className='text-success text-center mt-2 mb-2'>Worker to Users Ratio Chart</h2>
             <PieChart
@@ -350,7 +352,7 @@ const size = {
         {...size}
       />
           </div>
-          <div className='w-50' style={{height:'30vh',overflowY:'auto'}}>
+          <div className='w-50' style={{height:'50vh',overflowY:'auto'}}>
           <Table striped bordered hover>
       <thead>
         <tr>
@@ -368,7 +370,7 @@ const size = {
     </Table>
           </div>
           </div>
-          <div className='d-flex flex-column ms-5 me-5 mt-5' style={{ border: '2px solid red',height:'45vh',width:'85%'}}>
+          <div className='d-flex flex-column ms-5 me-5 mt-5' style={{ border: '2px solid red',height:'60vh',width:'85%'}}>
             <h3 className='text-center mt-2'>Job <span className='text-success'>Requests</span></h3>
 
             <div className='mt-2'>
@@ -393,7 +395,7 @@ const size = {
             </div>
           </div>
 
-          <div className='d-flex flex-column ms-5 me-5 mt-5' style={{ border: '2px solid green',height:'45vh',width:'85%'}}>
+          <div className='d-flex flex-column ms-5 me-5 mt-5 mb-5' style={{ border: '2px solid green',height:'60vh',width:'85%'}}>
             <h3 className='text-center mt-2'>Approved <span className='text-success'>Workers</span></h3>
 
             <div className='mt-2'>

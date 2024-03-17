@@ -174,8 +174,8 @@ function Usercanvas({user}) {
           <td>{item.email}</td>
           <td>{item.bookedworkers.find(d=>d.userid==user._id).status==true?<span className='text-success'>Accepted</span>:<span className='text-danger'>Denied</span>
           }</td>
-          <td>{item.bookedworkers.find(d=>d.userid==user._id).status==true&&<button onClick={()=>{handlereviewmodal(item.bookedworkers.map(d=>d._id))}} className='btn btn-success'>Review</button>} 
-           <i onClick={()=>{handledelete(item.bookedworkers.map(d=>d._id),item.name)}} style={{color:'red'}} class="fa-solid fa-trash ms-2 fa-xl"></i></td>
+          <td>{item.bookedworkers.find(d=>d.userid==user._id).status==true&&<button onClick={()=>{handlereviewmodal(item.bookedworkers.find(d=>d.userid==user._id)._id)}} className='btn btn-success'>Review</button>} 
+           <i onClick={()=>{handledelete(item.bookedworkers.find(d=>d.userid==user._id)._id,item.name)}} style={{color:'red'}} class="fa-solid fa-trash ms-2 fa-xl"></i></td>
 
         </tr>):
         <h2 className='text-center text-danger'>No status of workers</h2>
