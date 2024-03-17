@@ -97,7 +97,7 @@ function Register({ register }) {
 
   const registerForm = register ? true : false
   var heightt = ""
-  registerForm ? heightt = '73vh' : heightt = '64vh'
+  registerForm ? heightt = '80vh' : heightt = '75vh'
 
   const home = () => {
     navigate('/')
@@ -148,37 +148,38 @@ function Register({ register }) {
       <div className='container-fluid p-5 d-flex flex-column justify-content-center align-items-center w-100' style={{ background: 'linear-gradient(to bottom, #1d2671,#c33764)', height: '100vh' }}>
         <div className='glass row w-75 mt-3' style={{ height: heightt, borderRadius: '50px' }}>
           <div className="col-6 d-flex justify-content-center align-items-center">
-            <img src={img} height={'650px'} alt="" />
+            <img src={img} height={'570px'} className='mb-5' alt="" />
           </div>
           <div className="col-6 p-2" >
             <div style={{ backgroundColor: 'white', borderRadius: '50px' }} className='d-flex mt-1 flex-column justify-content-center align-items-center'>
-              <h1 className="fw-bolder mt-4" style={{ color: "#408EC6", fontSize: '70px' }}>CITY <span style={{ color: " #7A2048" }}>360</span></h1>
+              <h1 className="fw-bolder mt-4" style={{ color: "#408EC6", fontSize: '60px' }}>CITY <span style={{ color: " #7A2048" }}>360</span></h1>
 
               {registerForm ?
-                <h2 className='text-center mt-4 text-success'>USER REGISTER</h2> : <h2 className='text-center mt-5 text-success'>USER LOGIN</h2>}
+                <h2 className='text-center mt-2 text-success'>USER REGISTER</h2> : <h2 className='text-center mt-2 text-success'>USER LOGIN</h2>}
 
               <div className='d-flex flex-column justify-content-center align-items-center'>
                 <form className='mt-4'>
 
                   {registerForm &&
                     <div className='mb-3'>
-                      <TextField value={user.uname} onChange={(e) => { setuser({ ...user, uname: e.target.value }) }} className='w-100' label="Username" variant="outlined" />
+                      <TextField  size="small" value={user.uname} onChange={(e) => { setuser({ ...user, uname: e.target.value }) }} className='w-100' label="Username" variant="outlined" />
                     </div>
                   }
 
                   <div className='mb-3'>
-                    <TextField value={user.email} onChange={(e) => { setuser({ ...user, email: e.target.value }) }} className='w-100' label="Email" variant="outlined" />
+                    <TextField size="small" value={user.email} onChange={(e) => { setuser({ ...user, email: e.target.value }) }} className='w-100' label="Email" variant="outlined" />
                   </div>
 
                   {registerForm &&
                     <div className='mb-3'>
-                      <TextField value={user.mobile} onChange={(e) => { setuser({ ...user, mobile: e.target.value }) }} type='number' className='w-100' label="Mobile No." variant="outlined" />
+                      <TextField size="small" value={user.mobile} onChange={(e) => { setuser({ ...user, mobile: e.target.value }) }} type='number' className='w-100' label="Mobile No." variant="outlined" />
                     </div>
                   }
 
-                  <FormControl className='w-100' variant="outlined" onChange={(e) => { setuser({ ...user, pswd: e.target.value }) }} >
+                  <FormControl size="small" className='w-100' variant="outlined" onChange={(e) => { setuser({ ...user, pswd: e.target.value }) }} >
                     <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
                     <OutlinedInput
+                    
                       value={user.pswd}
                       id="outlined-adornment-password"
                       type={showPassword ? 'text' : 'password'}
@@ -210,7 +211,7 @@ function Register({ register }) {
                     {!registerForm &&
                       <Link onClick={handleShow} className="medium text-muted" style={{ textDecoration: "none" }}>Forgot password?</Link>}
                     {registerForm ?
-                      <p className="mb-5 pb-lg-2" style={{ color: '#393f81' }}>Already have an account? <a style={{ color: '#393f81' }}>Please <Link to={'/login'}>Login</Link></a></p>
+                      <p className="mb-3 pb-lg-2" style={{ color: '#393f81' }}>Already have an account? <a style={{ color: '#393f81' }}>Please <Link to={'/login'}>Login</Link></a></p>
                       : <p className="mb-5 pb-lg-2" style={{ color: '#393f81' }}>New User? <a style={{ color: '#393f81' }}>Please <Link to={'/register'}>Register</Link></a></p>
                     }
                   </div>

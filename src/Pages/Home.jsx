@@ -28,8 +28,8 @@ function Home() {
                 data-aos-easing="linear"
                 data-aos-duration="1300">
                 <div className='d-flex flex-column align-items-center justify-content-center mt-5'>
-                  <h1 style={{ color: '#C0D7FB', fontFamily: "poppins", fontSize: '90px' }} className='text-center mt-4'>Empowering Homes</h1>
-                  <h1 style={{ color: '#C0D7FB', fontFamily: "poppins", fontSize: '90px' }} className='text-center mt-1'>Connecting Lives</h1>
+                  <h1 style={{ color: '#C0D7FB', fontFamily: "poppins", fontSize: '80px' }} className='text-center mt-4'>Empowering Homes</h1>
+                  <h1 style={{ color: '#C0D7FB', fontFamily: "poppins", fontSize: '80px' }} className='text-center mt-1'>Connecting Lives</h1>
 
                   <h2 style={{ color: '#C0D7FB', fontFamily: "poppins" }} className='text-center'> City 360 - where services meet simplicity.</h2>
                   <div className='w-75 mt-5'> <h3 style={{ color: 'white', fontFamily: "poppins", textAlign: 'justify' }}>Welcome to City 360, your all-in-one destination for revolutionizing the way you manage household services. In the bustling landscape of modern living, we understand the challenges of balancing work, family, and maintaining a home. City 360 is here to simplify your life by bringing a comprehensive array of household services right to your fingertips.</h3></div>
@@ -39,37 +39,37 @@ function Home() {
               <div className="col-6 d-flex align-items-center justify-content-center mt-5" data-aos="fade-left"
                 data-aos-easing="linear"
                 data-aos-duration="1300">
-                <img src={work} height={'630px'} className='mt-5 me-5' alt="" />
+                <img src={work} height={'550px'} className='mt-5 me-5' alt="" />
 
               </div>
             </div>
           </div>
-        </Carousel.Item>
+        </Carousel.Item> 
         <Carousel.Item>
           <div className='w-100' style={{ height: "800px", background: 'linear-gradient(to bottom, #1E2761, #408EC6)' }}>
             <div className='row'>
               <div className="col-6 mt-4">
                 <div className='d-flex flex-column align-items-center justify-content-center mt-5'>
-                  <h1 style={{ color: '#C0D7FB', fontFamily: "poppins", fontSize: '80px' }} className='text-center mt-5 ms-5' >Electricians,Plumber,Masons or Cleaning Services....</h1>
-                  <h2 style={{ color: '#C0D7FB', fontFamily: "poppins", fontSize: '50px' }} className='text-center mt-2'>Be it any Services you want</h2>
+                  <h1 style={{ color: '#C0D7FB', fontFamily: "poppins", fontSize: '63px' }} className='text-center mt-5 ms-5' >Electricians,Plumber,Masons or Cleaning Services....</h1>
+                  <h2 style={{ color: '#C0D7FB', fontFamily: "poppins", fontSize: '40px' }} className='text-center mt-2'>Be it any Services you want</h2>
                   <div className='w-75 mt-5'> <h3 style={{ color: 'white', fontFamily: "poppins", textAlign: 'justify' }}>City 360 seamlessly connects you to a network of trusted service providers, ensuring that your home receives the care it deserves. From plumbing and electrical services to cleaning and maintenance, we've curated a diverse range of offerings to cater to your every need.</h3></div>
                 </div>
 
               </div>
 
               <div className="col-6 d-flex align-items-center justify-content-center">
-                <img src={work1} height={'750px'} className='me-5 mb-1' alt="" />
+                <img src={work1} height={'700px'} className='me-5 mb-1' alt="" />
 
               </div>
             </div>
           </div>
         </Carousel.Item>
-        <Carousel.Item>
+       <Carousel.Item>
           <div className='w-100' style={{ height: "800px", background: 'linear-gradient(to bottom, #1E2761, #408EC6)' }}>
             <div className='row'>
               <div className="col-6">
                 <div className='d-flex flex-column align-items-center justify-content-center mt-4'>
-                  <h1 style={{ color: '#C0D7FB', fontFamily: "poppins", fontSize: '90px' }} className='text-center mt-5 mb-5' >Register as User or Worker..</h1>
+                  <h1 style={{ color: '#C0D7FB', fontFamily: "poppins", fontSize: '70px' }} className='text-center mt-5 mb-5' >Register as User or Worker..</h1>
                   <div className='w-75'>
                     <h2 style={{ color: 'white', fontFamily: "poppins", textAlign: 'left' }}>Joining City 360 as a <span className='text-warning'>USER</span> is a straightforward and secure process designed to provide you with quick access to a world of household services and book any services you need</h2>
                     <h2 style={{ color: 'white', fontFamily: "poppins", textAlign: 'left' }} className='mt-4' >Joining City 360 as a <span className='text-warning'>WORKER</span> lets you connect with users seeking your expertise.</h2>
@@ -78,12 +78,12 @@ function Home() {
 
               </div>
               <div className="col-6 d-flex align-items-center justify-content-center">
-                <img src={work2} height={'700px'} className='me-5 mt-3' alt="" />
+                <img src={work2} height={'570px'} className='me-5 mt-3' alt="" />
 
               </div>
             </div>
           </div>
-        </Carousel.Item>
+        </Carousel.Item> 
       </Carousel>
 
       <Jobcards />
@@ -103,7 +103,7 @@ function Home() {
           justifyContent: 'center'
         }}>
 
-          <div style={{ marginRight: '70px', width: '800px', height: '160px', backgroundColor: '#ffc400', borderRadius: '50px' }} className='p-4 d-flex'>
+          <div style={{ marginRight: '50px', width: '700px', height: '160px', backgroundColor: '#ffc400', borderRadius: '50px' }} className='p-4 d-flex'>
             <h1 className='mt-4'>  <i class="fa-solid fa-mobile-screen-button fa-2xl"></i></h1>
             <div className='d-flex flex-column ms-3'>
               <h3 className='text-center'>Get a better City360 experience on mobile</h3>
@@ -133,9 +133,9 @@ function Home() {
 
           </div>
 
-          <div className='ms-5 referal'>
+          <div className='ms-3 referal'>
             <img style={{ position: 'absolute', top: '40%', left: '9%', transform: 'translate(-50%, -50%)', zIndex: '1',width:'120px' }} src={friends} alt="" />
-            <h4 style={{ position: 'absolute', top: '30%', left: '61%', transform: 'translate(-50%, -50%)', zIndex: '1', color: '#fff',textAlign:'left',width:'700px' }}>Tell your friends about City360 and earn cashback and other benefits. Earn upto 750 coins for each referral!!</h4>
+            <h4 style={{ position: 'absolute', top: '30%', left: '61%', transform: 'translate(-50%, -50%)', zIndex: '1', color: '#fff',textAlign:'left',width:'580px' }}>Tell your friends about City360 and earn cashback and other benefits. Earn upto 750 coins for each referral!!</h4>
 
             <div style={{ height: '40px', width: '150px', backgroundColor: '#ffc400', borderRadius: '10px',position: 'absolute', top: '75%', left: '25%', transform: 'translate(-50%, -50%)', zIndex: '1'}} className='d-flex justify-content-center align-items-center ms-3'>
                      <h4 className='text-dark text-center mt-1'>Refer Now!</h4>
@@ -150,8 +150,8 @@ function Home() {
 
       <div className='row w-100'  style={{height:'600px'}}>
         
-          <div className='col-8 d-flex justify-content-center align-items-center flex-column'>
-                <div style={{height:"135px",width:'60rem',border:'5px solid #ffc400'}} className='p-3 d-flex justify-content-between mb-5'>
+          <div className='col-8 d-flex justify-content-center align-items-center flex-column p-5'>
+                <div style={{height:"135px",width:'60rem',border:'5px solid #ffc400'}} className='p-3 d-flex justify-content-between mb-5 ms-2'>
                   <div>
                     <h3>ARE YOU A SERVICE EXPERT?</h3>
                    <h4>JOIN WORLDS LARGEST SERVICE NETWORK</h4>
@@ -189,7 +189,7 @@ function Home() {
 
             </div> 
             <div className='col-4 d-flex justify-content-center align-items-end flex-column'>
-              <img className='me-5' height={'600px'} src={potrait} alt="" />
+              <img className='ms-5' height={'600px'} src={potrait} alt="" />
              </div>
       </div>
 

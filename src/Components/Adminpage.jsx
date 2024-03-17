@@ -205,6 +205,7 @@ const handleLogout = ()=>{
   sessionStorage.removeItem("admin")
   SetisloggedOut(false)
   navigate('/')
+  window.location.reload()
 }
 
 const geteveryWorkers = async()=>{
@@ -268,14 +269,14 @@ const size = {
   return (
     <>
       {login ?
-        <div className='container-fluid p-5 d-flex flex-column justify-content-center align-items-center w-100' style={{ background: 'linear-gradient(to bottom, #1d2671,#c33764)', height: '100vh' }}>
-          <div className='glass row w-75 mt-3' style={{ height: '64vh', borderRadius: '50px' }}>
+        <div className='container-fluid  d-flex flex-column justify-content-center align-items-center w-100' style={{ background: 'linear-gradient(to bottom, #1d2671,#c33764)', height: '100vh' }}>
+          <div className='glass row w-75 mt-3' style={{ height: '80vh', borderRadius: '50px' }}>
             <div className="col-6 d-flex justify-content-center align-items-center">
-              <img src={img} height={'650px'} alt="" />
+              <img src={img} height={'550px'} alt="" />
             </div>
             <div className="col-6 p-5" >
-              <div style={{ backgroundColor: 'white', borderRadius: '50px', height: '53vh' }} className='d-flex  w-100 flex-column justify-content-center align-items-center'>
-                <h1 className="fw-bolder mt-3" style={{ color: "#408EC6", fontSize: '70px' }}>CITY <span style={{ color: " #7A2048" }}>360</span></h1>
+              <div style={{ backgroundColor: 'white', borderRadius: '50px', height: '67vh' }} className='d-flex  w-100 flex-column justify-content-center align-items-center mb-3'>
+                <h1 className="fw-bolder " style={{ color: "#408EC6", fontSize: '70px' }}>CITY <span style={{ color: " #7A2048" }}>360</span></h1>
 
 
                 <h2 className='text-center mt-4 text-success'>Admin Login</h2>
@@ -315,7 +316,7 @@ const size = {
                     </Stack>
 
                     <div className='mt-3'>
-                      <a className="medium text-muted" style={{ textDecoration: "none" }}>Forgot password?</a>
+                      <a className="medium text-muted ms-3" style={{ textDecoration: "none" }}>Forgot password?</a>
                     </div>
 
 

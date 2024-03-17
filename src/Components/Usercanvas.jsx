@@ -85,9 +85,9 @@ function Usercanvas({user}) {
     }
 
 
-    const handledelete = async(id,name)=>{
+    const handledelete = async(id,name)=>{  
       console.log(id);
-      const token = sessionStorage.getItem("token")
+       const token = sessionStorage.getItem("token")
     const reqheader = {
      "Content-Type":"application/json",
      "Authorization":`Bearer ${token}`
@@ -108,7 +108,7 @@ function Usercanvas({user}) {
       text: `${result.response.data}`,
       icon: 'error'   
     })
-   }
+   } 
     }
     
   return (

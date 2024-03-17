@@ -1,6 +1,6 @@
 .referal{
     position: relative;
-    width: 800px;
+    width: 700px;
     height: 160px;
 }
 
@@ -11,7 +11,7 @@
     left: 0;
     width: 0;
     height: 0;
-    border-left: 800px solid #031f50; 
+    border-left: 700px solid #031f50; 
     border-bottom: 160px solid transparent ;
     border-radius: 20px;
 }
@@ -25,7 +25,7 @@
     right: 0;
     width: 0;
     height: 0;
-    border-right: 800px solid #02399a; 
+    border-right: 700px solid #02399a; 
     border-top: 160px solid transparent;
     border-radius: 20px;
     color: #eceeee;
@@ -33,3 +33,4 @@
 }
 
 
+    

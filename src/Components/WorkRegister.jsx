@@ -96,8 +96,8 @@ function WorkRegister({ workerLogin }) {
             photo:'',
             cert:''
            })
-           setTimeout(()=>{navigate('/workerLogin')},7000)
-           navigate('/workerLogin')
+           setpreview("")
+           setTimeout(()=>{navigate('/workerLogin')},2300)
            }
           else{
               toast.error(result.response.data) 
@@ -161,7 +161,7 @@ function WorkRegister({ workerLogin }) {
       <div className='container-fluid p-5 d-flex flex-column justify-content-center align-items-center w-100' style={{ backgroundImage: `url(${bg})`, height: '100vh' }}>
 
         {!loginform ?
-          <div className='w-50 bg-light' style={{ height: '72vh', borderRadius: '50px' }}>
+          <div className='w-50 bg-light' style={{ height: '75vh', borderRadius: '50px' }}>
             <h2 className='text-center text-dark mt-3'>Worker Profile Registration</h2>
             <div className='d-flex justify-content-center mt-3'>
               <label htmlFor="profile" className='text-center'>
@@ -260,7 +260,8 @@ function WorkRegister({ workerLogin }) {
               <Button onClick={clear} style={{ width: '200px', height: '50px' }} variant="outlined">Reset</Button>
             </Stack>
             <div><p className="mb-5 pb-lg-2 text-center" style={{ color: '#393f81' }}>Already a User? <a style={{ color: '#393f81' }}>Please <Link to={'/workerLogin'}>Login</Link></a></p></div>
-          </div> :
+          </div> 
+          :
           <div style={{ backgroundColor: 'white', borderRadius: '50px',width:'35rem'}} className='d-flex mt-1 flex-column justify-content-center align-items-center'>
             <h1 className="fw-bolder mt-4" style={{ color: "#408EC6", fontSize: '70px' }}>CITY <span style={{ color: " #7A2048" }}>360</span></h1>
 

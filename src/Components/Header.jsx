@@ -34,7 +34,7 @@ function Header() {
             <Nav.Link><Link to={admin?'/adminpage':'/adminLogin'} className='fs-4 ms-1' style={{color:"#EFDBCB",textDecoration:'none'}} >Admin</Link></Nav.Link>
             <Nav.Link><Link to={worker?'/workerpage':'/workerLogin'} className='fs-4 ms-1' style={{color:"#EFDBCB",textDecoration:'none'}} >WorkerPage</Link></Nav.Link>
 
-            <Nav.Link><Link to={'/login'}><Button variant="outline-info" style={{marginLeft:"720px"}} size="md"><i class="fa-solid fa-right-to-bracket fa-fade me-1"></i> Login</Button></Link></Nav.Link>
+            <Nav.Link><Link to={'/login'}><Button variant="outline-info" style={{marginLeft:"320px"}} size="md"><i class="fa-solid fa-right-to-bracket fa-fade me-1"></i> Login</Button></Link></Nav.Link>
             <Nav.Link><Link to={'/register'}><Button variant="outline-info" size="md"><i class="fa-solid fa-user-plus fa-fade me-2"></i>Sign Up</Button></Link></Nav.Link>
           </Nav>
         </Navbar.Collapse>
